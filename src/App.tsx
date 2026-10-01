@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import Layout from "./components/Layout"
 import Home from "./pages/Home"
 import Users from "./pages/Users"
-import About from "./pages/About"
+import UserDetails from "./pages/UserDetails"
 
 function App() {
 	return (
@@ -13,7 +13,7 @@ function App() {
       {/* Child routes are rendered inside the Layout's Outlet */}
         <Route path="/" element={<Home />} />
         <Route path="/users" element={<Users />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/users/:id" element={<UserDetails />} />
       </Route>
     </Routes>
 
