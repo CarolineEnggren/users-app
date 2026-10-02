@@ -1,4 +1,5 @@
 import { useUsers } from "../hooks/useUsers"
+import UserList from "../components/UserList"
 
 const Users = () => {
 	const { data: users, isLoading, isError } = useUsers()
@@ -18,6 +19,7 @@ const Users = () => {
 	return (
 		<main>
 			<h1>Users</h1>
+			<UserList users={users} />
 		</main>
 	)
 }

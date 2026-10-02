@@ -8,9 +8,9 @@ type UserCardProps = {
 const UserCard = ({ user }:UserCardProps) => {
 
     return(
-        <article>
-            <h2>{user.profile.name}</h2>
-            <p>{user.username}</p>
+        <article className="rounded-lg border p-6">
+            <h2 className="text-xl font-bold">{user.profile.name}</h2>
+            <p className="text-gray-600">{user.username}</p>
             <p>{user.profile.address.city}</p>
         </article>
     )
