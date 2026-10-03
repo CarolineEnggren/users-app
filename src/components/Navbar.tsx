@@ -8,30 +8,38 @@ const Navbar = () => {
 	// 3. Responsive navigation later if needed
 
 	return (
-		<nav className="flex item-center justify-between px-6 py-4 border-b bg-white">
-			<div className="flex item-center gap-2">
-				<User />
+		<nav className="flex items-center justify-between border-b border-stone-200 bg-white px-6 py-4 shadow-sm">
+			<div className="flex items-center gap-2 font-semibold text-stone-800">
+				<User className="text-emerald-700" />
 				Users App
 			</div>
 
-			<div className="flex items-center gap-6">
+			<div className="flex items-center gap-3">
 				{/* NavLink handles navigation and active link styling */}
 				<NavLink
 					to="/"
 					className={({ isActive }) =>
-						`flex items-center gap-2 ${isActive ? "font-bold" : ""}`
+						`flex items-center gap-2 rounded-lg px-4 py-2 transition ${
+							isActive
+								? "bg-violet-100 font-semibold text-violet-700"
+								: "text-stone-600 hover:bg-stone-100"
+						}`
 					}
 				>
-					<Home />
+					<Home size={20} />
 					Home
 				</NavLink>
 				<NavLink
 					to="/users"
 					className={({ isActive }) =>
-						`flex items-center gap-2 ${isActive ? "font-bold" : ""}`
+						`flex items-center gap-2 rounded-lg px-4 py-2 transition ${
+							isActive
+								? "bg-violet-100 font-semibold text-violet-700"
+								: "text-stone-600 hover:bg-stone-100"
+						}`
 					}
 				>
-					<Users />
+					<Users size={20}/>
 					Users
 				</NavLink>
 			</div>

@@ -11,7 +11,7 @@ const Layout = () => {
 	// 2. Main - här visas aktuell Page
 	// 3. Footer - ska finnas på alla sidor
 	return (
-		<div className="min-h-screen flex flex-col">
+		<div className="min-h-screen bg-stone-50 text-stone-800">
 			<Navbar />
 
 			<main className="flex-1">
