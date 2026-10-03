@@ -8,7 +8,7 @@ const Navbar = () => {
 	// 3. Responsive navigation later if needed
 
 	return (
-		<nav className="flex items-center justify-between border-b border-stone-200 bg-white px-6 py-4 shadow-sm">
+		<nav className="sticky top-0 z-50 flex items-center justify-between border-b border-stone-200 bg-white px-6 py-4 shadow-sm">
 			<div className="flex items-center gap-2 font-semibold text-stone-800">
 				<User className="text-emerald-700" />
 				Users App
@@ -21,7 +21,7 @@ const Navbar = () => {
 					className={({ isActive }) =>
 						`flex items-center gap-2 rounded-lg px-4 py-2 transition ${
 							isActive
-								? "bg-violet-100 font-semibold text-violet-700"
+								? "bg-stone-100 font-semibold text-emerald-800"
 								: "text-stone-600 hover:bg-stone-100"
 						}`
 					}
@@ -34,7 +34,7 @@ const Navbar = () => {
 					className={({ isActive }) =>
 						`flex items-center gap-2 rounded-lg px-4 py-2 transition ${
 							isActive
-								? "bg-violet-100 font-semibold text-violet-700"
+								? "bg-stone-100 font-semibold text-emerald-800"
 								: "text-stone-600 hover:bg-stone-100"
 						}`
 					}
