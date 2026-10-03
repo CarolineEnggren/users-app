@@ -16,9 +16,7 @@ const Home = () => {
 		return <p>No users found.</p>
 	}
 	// Set keeps only unique cities.
-	const cities = new Set(
-        users.map(user => user.profile.address.city)
-    )
+	const cities = new Set(users.map(user => user.profile.address.city))
 
 	const lightThemes = users.filter(
 		user => user.settings.theme === "light",
@@ -30,6 +28,17 @@ const Home = () => {
 
 	return (
 		<main className="pt-16">
+			<div className="mb-10 px-6">
+				<p className="text-sm font-medium uppercase">Welcome to</p>
+
+				<h1 className="text-4xl font-bold">Users App</h1>
+
+				<p className="mt-3 max-w-xl">
+					Explore users, view their details and get a quick overview
+					of the community.
+				</p>
+			</div>
+
 			<Stats
 				users={users.length}
 				cities={cities.size}
