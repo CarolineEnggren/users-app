@@ -1,6 +1,6 @@
 import { useUsers } from "../hooks/useUsers"
 import Stats from "../components/Stats"
-import { Divide } from "lucide-react"
+
 
 const Home = () => {
 	const { data: users, isLoading, isError, refetch } = useUsers()
