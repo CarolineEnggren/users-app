@@ -45,7 +45,7 @@ const UserDetails = () => {
 		<main className="mx-auto max-w-4xl space-y-6 px-6 py-10">
 			<Link
 				to="/users"
-				className="inline-flex items-center gap-2 hont-medium text-emeral-800 hover:text-emeral-600"
+				className="inline-flex items-center gap-2 font-medium text-emerald-800 hover:text-emerald-600"
 			>
 				<ArrowLeft size={18} /> Back to users
 			</Link>
