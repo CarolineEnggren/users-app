@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom"
 import { useUsers } from "../hooks/useUsers"
 import { ArrowLeft } from "lucide-react"
+import ErrorState from "../components/ErrorState"
 
 const UserDetails = () => {
 	const { id } = useParams()
@@ -10,25 +11,9 @@ const UserDetails = () => {
 		return <p>Loading user...</p>
 	}
 
+	// Show the reusable error state and allow the user to retry the request.
 	if (isError) {
-		return (
-			<div className="mx-auto max-w-xl px-6 py-16 text-center">
-				<h1 className="text-2xl font-semibold text-stone-800">
-					We couldn not load the users
-				</h1>
-
-				<p className="mt-2 text-stone-600">
-					Something went wrong. Please try again.
-				</p>
-
-				<button
-					onClick={() => refetch()}
-					className="mt-5 rounded-lg bg-emerald-700 px-4 py-2 font-medium text-white hover:bg-emerald-800"
-				>
-					Try again
-				</button>
-			</div>
-		)
+		return <ErrorState onRetry={() => refetch()} />
 	}
 
 	if (!users) {
