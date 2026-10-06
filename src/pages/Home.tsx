@@ -2,14 +2,13 @@ import { useUsers } from "../hooks/useUsers"
 import Stats from "../components/Stats"
 import ErrorState from "../components/ErrorState"
 
-
 const Home = () => {
 	const { data: users, isLoading, isError, refetch } = useUsers()
 
 	if (isLoading) {
 		return <p>Loading users...</p>
 	}
-    // Show the reusable error state and allow the user to retry the request.
+	// Show the reusable error state and allow the user to retry the request.
 	if (isError) {
 		return <ErrorState onRetry={() => refetch()} />
 	}
